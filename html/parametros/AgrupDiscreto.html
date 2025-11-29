@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrupamento Discreto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- <link href="../../bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <link href="../../css/estilo.css" rel="stylesheet">
+    <link href="../../css/parametros.css" rel="stylesheet">
+</head>
+<body>
+    <div id="header-home" class="card">
+  <div class="card-body">
+      <img src="../../img/logo-estatik.png" alt="" class="logo">
+      <div>
+        <a href="../../html/home.html" class="voltar btn btn-primary">Voltar para home</a>
+      </div>
+  </div>
+</div>
+
+<h1 class="tituloEscolha">Agrupamento discreto</h1>
+
+    <main>
+      <div class="row">
+        <div class="col-3">
+           <div class="d-flex flex-column" id="cards" style="display:none;">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Cálculos: </h3>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Média</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary" onclick="exibirMedia()">Calcular</button>
+                <p class="card-text" id="mediaResultado"></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Mediana</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary" onclick="calcularMediana()">Calcular</button>
+                <p class="card-text" id="medianaResultado"></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Moda</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary" onclick="calcularModa()">Calcular</button>
+                <p class="card-text" id="modaResultado"></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Variância</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary" onclick="exibirVariancia()">Calcular</button>
+                <p class="card-text" id="varianciaResultado"></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Desvio Padrão</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary" onclick="exibirDesvioPadrao()">Calcular</button>
+                <p class="card-text" id="desvioPadraoResultado"></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Coeficiente de variação</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary" onclick="calcularCoeficienteVariacao()">Calcular</button>
+                <p class="card-text" id="coefvarResultado"></p>
+              </div>
+            </div>
+        </div>
+        </div>
+
+
+        
+        <div class="col-9">
+            <select id="inputType" class="form-select form-select-lg mb-3" aria-label="Large select example">
+            <option selected>Escolha como deseja inserir os dados</option>
+            <option value="tabela">Tabela</option>
+            <option value="campoTexto">Lista</option>
+            </select>
+
+          <!-- Campo de texto -->
+          <form id="formCampoTexto" style="display:none;">
+            <div class="mb-3">
+              <label class="form-label">Digite os dados da amostra:</label>
+              <input type="text" class="form-control" id="valores" aria-describedby="emailHelp" placeholder="Ex: 7, 2, 10, 5">
+              <br>
+              <label class="form-label">Digite a unidade de medida dos dados (opcional):</label>
+              <input type="text" class="form-control" id="medidaTexto" aria-describedby="emailHelp">
+            </div>
+            <div class="botoes">
+              <button onclick="pegarDados(event)" type="submit" value="Enviar" class="Botoes-dados btn btn-primary">ordenar dados</button>
+              <button onclick="limparCampoTexto(event)" class="Botoes-dados btn btn-danger" style="display:none;" id="btnlimparCampoTexto">Limpar dados</button>
+            </div>
+            <br><br>
+            <h3 id="resultado"></h3>
+          </form>
+    
+          <!-- Tabela -->
+          <table id="tabela" class="table table-striped" style="display:none;">
+              <thead>
+                  <tr>
+                      <th>Xi</th>
+                      <th>Fi</th>
+                      <th>Fac</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><input type="number" step="any" class="xi" oninput="atualizarLinha(this)"></td>
+                      <td><input type="number" step="any" class="fi" oninput="atualizarLinha(this)"></td>
+                      <td><input type="number" step="any" class="fac" oninput="atualizarLinha(this)"></td>
+                  </tr>
+              </tbody>
+          </table>
+          <div class="botoes">
+            <button onclick="adicionarLinha()" class="Botoes-dados btn btn-primary" style="display:none;" id="btnAdicionar">Adicionar Linha</button>
+            <button onclick="limparTabela(event)" class="Botoes-dados btn btn-danger" style="display:none;" id="btnlimparTabela">Limpar tabela</button>
+          </div>
+          <div id="mt" style="display:none;">
+            <label class="form-label">Digite a unidade de medida dos dados (opcional):</label>
+            <input type="text" class="form-control" id="medidaTabela">
+            <br>
+            <!-- <button onclick="pegarDados(event)" type="submit" class="btn btn-primary">Enviar</button> -->
+            <br><br>
+          </div>
+      
+        </div>
+      </div>
+    </main>
+
+
+
+<footer class="text-white text-center py-4 mt-5">
+  <div class="container">
+    <div class="row">
+        <div class="col-6">
+            <p class="mb-1">&copy; 2025 Estatik. Todos os direitos reservados.</p>
+            <img class="Fatec-Logo" src="../../img/fatecLogo.jpg" alt="">
+        </div>
+
+        <div class="col-6">
+            <h3>Feito por:</h3>
+            <ul>
+      
+                <li>Arthur Gimenez Oliveira</li>
+                <li>Marcela Aringoli</li>
+                <li>Natália Araújo da Silveira</li>
+                <li>Thamires Marques Alves</li>
+            </ul>
+            <h3>Turma: ADS T - 2025</h3>
+        </div>
+
+    </div>
+  </div>
+</footer>
+
+    <script src="../../js/Discreto.js"></script>
+</body>
+</html>
+
