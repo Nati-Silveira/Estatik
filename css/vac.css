@@ -1,0 +1,165 @@
+
+
+h1{
+    font-size: 32px;
+    margin-top: 50px;
+    padding: 16px 0 6px 0;
+    text-align: center;
+    font-family: octosquareBlack, sans-serif;
+}
+
+
+ h2{
+    font-size: 28px;
+    margin-top: 50px;
+    padding: 16px 0 6px 0;
+    font-family: octosquareBlack, sans-serif;
+}
+
+
+
+.inputType {
+    display: block;
+    font-family: 'OctosquareLight', sans-serif;
+    font-size: 22px;
+    padding: 10px;
+    border: 2px solid #0c8f8c;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.inputType:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+
+
+.calculos{
+    font-family: 'OctosquareBlack', sans-serif;
+    font-size: 22px; 
+}
+
+.botoesCalculo{
+    font-size: 18px;
+    font-family: octosquareLight, sans-serif;
+    background-color: #0c8f8c;
+    border: none;
+}
+
+
+.tabela {
+    font-family: 'OctosquareLight', sans-serif;
+    font-size: 25px;
+    width: 80%;
+    margin: 0px 20px 20px 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    border-collapse: collapse;
+}
+
+.tabela th {
+    font-family: 'OctosquareBlack', sans-serif;
+    background-color: #55709e; /* Teal header background */
+    color: white; /* White text for contrast */
+    padding: 15px;
+    text-align: center;
+}
+
+.tabela td {
+    padding: 12px;
+    text-align: center;
+    border: 2px solid #0c8f8c; /* Teal border for cells */
+    background-color: #ffffff; /* White cell background */
+}
+
+.tabela input {
+    font-size: 18px;
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #0c8f8c;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tabela input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+
+.card-text{
+    font-size: 20px;
+    font-family: 'OctosquareLight', sans-serif;
+}
+
+.form-label, .form-control, #resultado{
+    font-size: 22px;
+    font-family: 'OctosquareBlack', sans-serif;
+
+}
+
+.Botoes-dados{
+    font-size: 22px;
+    font-family: octosquareLight, sans-serif;
+    border: none;
+    margin: 10px;
+}
+
+#btnlimparExp, #btnlimparNormal{
+    margin: auto 0;
+}
+
+
+
+#a, #b, #c, #d, #a1, #a2, #b1, #b2, #aDistrNormal, #bDistrNormal{
+    width: 150px;
+    margin: 20px;
+    padding: 25px;
+}
+
+#sinal, #sinal2, #sinalDistrExpo, #sinal2DistrExpo, #sinalDistrNormal, #sinal2DistrNormal, #sinalNormal, #sinaltab, #sinalclass{
+    width: 150px;
+    margin: 35px;
+    height: 50px;
+}
+
+.limites, .escolha, .escolha2, .escolha3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#x, #xn, #x2, #M, #M2, #x3, #M3{
+    font-family: octosquareLight, sans-serif;
+    background-color: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.tituloEscolha-dist{
+    font-size: 32px;
+    padding: 16px 0 6px 0;
+    font-family: octosquareBlack, sans-serif;
+}
+
+.label-paramEstatisticos{
+   font-size: 22px;
+    font-family: octosquareBlack, sans-serif;
+}
+.input-paramEstatisticos{
+   font-size: 22px;
+   font-family: 'OctosquareLight', sans-serif;
+   width: 100px;
+   border-radius: 8px;
+
+}
+
+.input-media{
+font-family: 'OctosquareLight', sans-serif;
+}
+

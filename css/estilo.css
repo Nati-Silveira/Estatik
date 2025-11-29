@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'OctosquareBlack'; /* nome que você vai usar no CSS */
+    src: url('../fonts/tt_octosquares/TT\ Octosquares\ Trial\ Expanded\ Black.ttf') format('truetype'); /* caminho relativo do arquivo */
+}
+
+@font-face {
+    font-family: 'OctosquareLight'; /* nome que você vai usar no CSS */
+    src: url('../fonts/tt_octosquares/TT\ Octosquares\ Trial\ Expanded\ light.ttf') format('truetype'); /* caminho relativo do arquivo */
+}
+
+.tituloEscolha{
+    font-size: 32px;
+    margin-top: 50px;
+    padding: 16px 0 6px 0;
+    text-align: center;
+    font-family: octosquareBlack, sans-serif;
+}
+
+main{
+    padding: 12px;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+input {
+    width: 60px;
+    text-align: center;
+}
+
+.botoes{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+button{
+    margin-bottom: 10px;
+}
+
+.card-group{
+    text-align: center;
+}
+
+.logo{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    /* margin-top: 50px; */
+}
+
+body{
+    background-color: aliceblue;
+     display: flex;
+     flex-direction: column;
+}
+
+
+#header-home{
+    height: 100px;
+}
+
+.escolha{
+    margin-top: 50px;
+}
+
+
+
+
+.escolha .card-body {
+    margin: auto;
+    justify-content: center;
+    margin-top: 100px;
+    height: 250px;
+
+}
+
+
+
+footer{
+    background-color: #55709e;
+}
+
+footer p{
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+footer h3{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+footer li{
+    list-style: none;
+    font-size: 18px;
+}
+
+.Fatec-Logo{
+    width: 200px;
+}
+
+
+.calcular{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    font-family: octosquareLight, sans-serif;
+    background-color: #0c8f8c;
+    border: none;
+}
+
+
+
+.container-escolha {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 60px 40px 40px; 
+    margin: 40px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    /* min-height: 370px; */
+    text-align: center;
+    width: 900px;
+}
+
+.container-escolha h2 {
+    margin-bottom: 40px;
+    font-family: octosquareBlack, sans-serif;
+    font-size: 30px;
+
+}
+
+
+.card-title{
+    font-family: octosquareBlack, sans-serif;
+    font-size: 24px;
+    color: #0c8f8c;
+}
+.container-escolha .col-5 {
+    margin-bottom: 20px; 
+}
+
+.voltar{
+    font-size: 18px;
+    font-family: octosquareLight, sans-serif;
+    background-color: #28908e;
+    border: none;
+    margin-top: -50px;
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* ocupa o espaço restante */
+}
+
