@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="../../bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="../../css/estilo.css" rel="stylesheet">
+  <link href="../../css/vad.css" rel="stylesheet">
+  <title>Variáveis Aleatórias Discretas</title>
+</head>
+
+<body>
+  <div id="header-home" class="card">
+    <div class="card-body">
+      <img src="../../img/logo-estatik.png" alt="" class="logo">
+      <div>
+        <a href="../../html/home.html" class="voltar btn btn-primary">Voltar para home</a>
+      </div>
+    </div>
+  </div>
+
+  <h1>Variáveis Aleatórias Discretas</h1>
+
+  <main>
+
+    <select id="inputType" class="form-select form-select-lg mb-3 inputType" >
+      <option value="" selected>Escolha o tipo de distribuição</option>
+      <option value="DistBi">Distribuição Binomial</option>
+      <option value="DistPoi">Distribuição de Poisson</option>
+    </select>
+
+        <div class="probabilidade" id="DistrBi" style="display:none;">
+          <div class="row">
+            <div class="col-3">
+                  <div class="d-flex flex-column" id="cardBi" style="display:none;">
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="calculos">Cálculos: </h3>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="calculos">Média</h3>
+                        <button type="submit" class="botoesCalculo btn btn-primary" onclick="exibirMediaBi()">Calcular</button>
+                        <p class="card-text" id="mediaBiResultado"></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="calculos">Variância</h3>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+                          onclick="exibirVarianciaBi()">Calcular</button>
+                        <p class="card-text" id="varianciaBiResultado"></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="calculos">Desvio Padrão</h3>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+                          onclick="exibirDesvioPadraoBi()">Calcular</button>
+                        <p class="card-text" id="desvioPadraoBiResultado"></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="calculos">Coeficiente de variação</h3>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+                          onclick="calcularCoeficienteVariacaoBi()">Calcular</button>
+                        <p class="card-text" id="coefvarBiResultado"></p>
+                      </div>
+                    </div>
+                    <div class="card" id="cardProbi">
+                      <div class="card-body">
+                        <h3 class="calculos">Probabilidade</h3>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+                          onclick="calcularProbabilidadeBi()">Calcular</button>
+                        <p class="card-text" id="probBiResultado"></p>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+
+            <div class="col-9">
+              <h3 class="tituloEscolha-dist">Distribuição Binomial</h3>
+        
+              <form id="TextoBi">
+        
+                <div class="limites">
+                  <div class="mb-3">
+                    <label class="form-label">Digite o Espaço Amostral:</label>
+                    <input type="text" class="form-control inputBi" id="espamost">
+                    <label class="form-label">Digite a probabilidade de sucesso (%) :</label>
+                    <input type="text" class="form-control inputBi" id="suc" aria-describedby="emailHelp">
+                    <br>
+                  </div>
+                </div>
+
+                </form>
+                <div class="limites">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="aDistrBi" aria-describedby="emailHelp" placeholder="a">
+                  </div>
+                  <select id="sinalDistrBi" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">¨
+                    <option value="">sinal</option>
+                    <option value="menorDistrBi"> &lt; </option>
+                    <option value="menorIgualDistrBi"> &le; </option>
+                  </select>
+                  <p id="xDistrBi">X</p>
+                  <select id="sinal2DistrBi" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+                    <option value="">sinal</option>
+                    <option value="maior2DistrBi"> &gt; </option>
+                    <option value="maiorIgual2DistrBi"> &ge; </option>
+                    <option value="menor2DistrBi"> &lt; </option>
+                    <option value="menorIgual2DistrBi"> &le; </option>
+                    <option value="igualDistrBi"> = </option>
+                  </select>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="bDistrBi" aria-describedby="emailHelp" placeholder="b">
+                  </div>
+                </div>
+                <button onclick="limparBotao(event)" class="Botoes-dados btn btn-danger" style="display:none;"
+                  id="btnlimparDistrBi">Limpar dados</button>
+                <h3 id="resultado"></h3>
+      
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+    
+
+
+    <div class="probabilidade" id="DistrPoi" style="display:none;">
+      <div class="row">
+        <div class="col-3">
+          <div class="d-flex flex-column" id="cardPoi" style="display:none;">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Cálculos: </h3>
+              </div>
+            </div>
+        
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Desvio Padrão</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary"
+                  onclick="exibirDesvioPadraoPoi()">Calcular</button>
+                <p class="card-text" id="desvioPadraoPoiResultado"></p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Coeficiente de variação</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary"
+                  onclick="calcularCoeficienteVariacaoPoi()">Calcular</button>
+                <p class="card-text" id="coefvarPoiResultado"></p>
+              </div>
+            </div>
+            <div class="card" id="cardProbi">
+              <div class="card-body">
+                <h3 class="calculos">Probabilidade</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary"
+                  onclick="calcularProbabilidadePoi()">Calcular</button>
+                <p class="card-text" id="probPoiResultado"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-9">
+
+          <!-- Distribuição de Poisson -->
+            <h3 class="tituloEscolha-dist">Distribuição de Poisson</h3>
+      
+           <form id="TextoPoi">
+  <div class="mb-3">
+    <label class="form-label">Digite a média/variância:</label>
+    <input type="text" class="form-control" id="mediaPoi" aria-describedby="emailHelp">
+  </div>
+
+  <div class="limites">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="aDistrPoi" placeholder="a">
+    </div>
+    <select id="sinalDistrPoi" class="form-select form-select-lg mb-3 inputType">
+      <option value="">sinal</option>
+      <option value="menorDistrPoi">&lt;</option>
+      <option value="menorIgualDistrPoi">&le;</option>
+    </select>
+    <p id="xDistrPoi">X</p>
+    <select id="sinal2DistrPoi" class="form-select form-select-lg mb-3 inputType">
+      <option value="">sinal</option>
+      <option value="maior2DistrPoi">&gt;</option>
+      <option value="maiorIgual2DistrPoi">&ge;</option>
+      <option value="menor2DistrPoi">&lt;</option>
+      <option value="menorIgual2DistrPoi">&le;</option>
+      <option value="igualDistrPoi">=</option>
+    </select>
+    <div class="mb-3">
+      <input type="text" class="form-control" id="bDistrPoi" placeholder="b">
+    </div>
+  </div>
+
+  <button onclick="limparBotao(event)" class="Botoes-dados btn btn-danger" id="btnlimparDistrPoi" style="display:none;">Limpar dados</button>
+</form>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+  
+  </main>
+
+  <footer class="text-white text-center py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <p class="mb-1">&copy; 2025 Estatik. Todos os direitos reservados.</p>
+          <img class="Fatec-Logo" src="../../img/fatecLogo.jpg" alt="">
+        </div>
+
+        <div class="col-6">
+          <h3>Feito por:</h3>
+          <ul>
+
+            <li>Arthur Gimenez Oliveira</li>
+            <li>Marcela Aringoli</li>
+            <li>Natália Araújo da Silveira</li>
+            <li>Thamires Marques Alves</li>
+          </ul>
+          <h3>Turma: ADS T - 2025</h3>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/Vad.js"></script>
+  <script src="../../bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
