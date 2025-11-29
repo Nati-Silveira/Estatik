@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="../../bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="../../css/estilo.css" rel="stylesheet">
+  <link href="../../css/vac.css" rel="stylesheet">
+  <title>Variáveis Aleatórias Contínuas</title>
+  <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.5/dist/jstat.min.js"></script>
+</head>
+
+<body>
+  <div id="header-home" class="card">
+    <div class="card-body">
+      <img src="../../img/logo-estatik.png" alt="" class="logo">
+      <div>
+        <a href="../../html/home.html" class="voltar btn btn-primary">Voltar para home</a>
+      </div>
+    </div>
+  </div>
+
+  <h1>Variáveis Aleatórias Contínuas</h1>
+
+  <main>
+
+    <select id="inputType" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+      <option value="" selected>Escolha o tipo de distribuição</option>
+      <option value="DistUni">Distribuição Uniforme</option>
+      <option value="DistExp">Distribuição Exponencial</option>
+      <option value="DistNorm">Distribuição Normal</option>
+    </select>
+
+
+
+    <div class="probabilidade" id="DistribuiçãoUni" style="display:none;">
+        <div class="row">
+        <div class="col-3">
+         
+                    <div class="d-flex flex-column" id="cardsDistrUniforme" style="display:none;">
+                        <div class="card">
+                        <div class="card-body">
+                            <h3 class="calculos">Cálculos: </h3>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <h3 class="calculos">Média</h3>
+                            <button type="submit" class="botoesCalculo btn btn-primary" onclick="exibirMediaUni()">Calcular</button>
+                            <p class="card-text" id="mediauniResultado"></p>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <h3 class="calculos">Variância</h3>
+                            <button type="submit" class="botoesCalculo btn btn-primary"
+                            onclick="exibirVarianciaUni()">Calcular</button>
+                            <p class="card-text" id="varianciauniResultado"></p>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <h3 class="calculos">Desvio Padrão</h3>
+                            <button type="submit" class="botoesCalculo btn btn-primary"
+                            onclick="exibirDesvioPadraoUni()">Calcular</button>
+                            <p class="card-text" id="desvioPadraouniResultado"></p>
+                        </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-body">
+                            <h3 class="calculos">Coeficiente de variação</h3>
+                            <button type="submit" class="botoesCalculo btn btn-primary"
+                            onclick="calcularCoeficienteVariacaoUni()">Calcular</button>
+                            <p class="card-text" id="coefvaruniResultado"></p>
+                        </div>
+                        </div>
+                        <div class="card" id="cardProbi">
+                        <div class="card-body">
+                            <h3 class="calculos">Probabilidade</h3>
+                            <button type="submit" class="botoesCalculo btn btn-primary"
+                            onclick="calcularProbabilidade()">Calcular</button>
+                            <p class="card-text" id="probResultado"></p>
+                        </div>
+                        </div>
+                    </div>
+        </div>
+
+
+        <div class="col-9">
+            <!-- Distribuição uniforme -->
+            
+            <h3 class="tituloEscolha-dist">Distribuição Uniforme</h3>
+
+            <form id="formCampoTextoDistribUni">
+                <div class="limites">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="a" aria-describedby="emailHelp" placeholder="a">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="b" aria-describedby="emailHelp" placeholder="b">
+                </div>
+                </div>
+
+                <div class="limites">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="c" aria-describedby="emailHelp" placeholder="c">
+                </div>
+                <select id="sinal" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">¨
+                    <option value="">sinal</option>
+                    <option value="menor"> &lt; </option>
+                    <option value="menorIgual"> &le; </option>
+                </select>
+                <p id="x">X</p>
+                <select id="sinal2" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+                    <option value="">sinal</option>
+                    <option value="maior2"> &gt; </option>
+                    <option value="maiorIgual2"> &ge; </option>
+                    <option value="menor2"> &lt; </option>
+                    <option value="menorIgual2"> &le; </option>
+                    <option value="igual"> = </option>
+                </select>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="d" aria-describedby="emailHelp" placeholder="d">
+                </div>
+                </div>
+                <button onclick="limparBotao(event)" class="Botoes-dados btn btn-danger" style="display:none;"
+                id="btnlimpar">Limpar dados</button>
+                <h3 id="resultado"></h3>
+            </form>
+        </div>
+    
+     </div>
+    </div>
+
+   
+
+     <div class="probabilidade" id="DistribuiçãoExpo" style="display:none;">
+        <div class="row">
+            <div class="col-3">
+    
+          <div class="d-flex flex-column" id="cardsDistrExponencial" style="display:none;">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="calculos">Cálculo: </h3>
+              </div>
+            </div>
+            <div class="card" style="display:none;" id="cardProbExpo">
+              <div class="card-body">
+                <h3 class="calculos">Probabilidade Exponencial</h3>
+                <button type="submit" class="botoesCalculo btn btn-primary"
+                  onclick="calcularExponencial()">Calcular</button>
+                <p class="card-text" id="probExpoResultado"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+   
+
+
+
+
+
+        <div class="col-9">
+            <!-- Distribuição exponencial -->
+
+            <h3 class="tituloEscolha-dist" id="T1">Distribuição Exponencial</h3>
+            <form id="formCampoTexto">
+                <label class="form-label">Digite a média ou desvio padrão:</label>
+                <input type="text" class="form-control input-media" id="media">
+                <br>
+                <div class="limites">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="a2" placeholder="a">
+                </div>
+                <select id="sinalDistrExpo" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">¨
+                    <option value="">sinal</option>
+                    <option value="menorDistrExpo"> &lt; </option>
+                    <option value="menorIgualDistrExpo"> &le; </option>
+                </select>
+                <p id="x">X</p>
+                <select id="sinal2DistrExpo" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+                    <option value="">sinal</option>
+                    <option value="maior2DistrExpo"> &gt; </option>
+                    <option value="maiorIgual2DistrExpo"> &ge; </option>
+                    <option value="menor2DistrExpo"> &lt; </option>
+                    <option value="menorIgual2DistrExpo"> &le; </option>
+                    <option value="igualDistrExpo"> = </option>
+                </select>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="b2" placeholder="b">
+                </div>
+                <button onclick="limparBotao(event)" class="Botoes-dados btn btn-danger" style="display:none;"
+                    id="btnlimparExp">Limpar dados</button>
+                </div>
+                <h3 id="resultado"></h3>
+            </form>
+        </div>
+
+
+
+
+        </div>
+     </div>
+
+
+    
+
+    <!-- Distribuição normal -->
+    <div id="DistribuiçãoNorm" style="display:none;">
+      <h3 class="tituloEscolha-dist">Distribuição Normal</h3>
+      <select id="inputTypeDistribNormal" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+        <option value="" selected>Escolha como deseja inserir os dados</option>
+        <option value="paramEstatisticos">Parâmetros estatísticos</option>
+        <option value="dadosListados">Dados listados</option>
+        <option value="tabelaAgrupDiscreto">Tabela Fi - Agrupamento discreto</option>
+        <option value="tabelaAgrupClasses">Tabela Fi - Agrupamento em classes</option>
+      </select>
+
+
+      <div class="row">
+        <div class="col-3">
+                    <div class="d-flex flex-column" id="cardsDistrNormal" style="display:none;">
+                    <div class="card">
+                        <div class="card-body" id="cardcalculo">
+                        <h3 class="calculos">Cálculo: </h3>
+                        </div>
+                    </div>
+                    <div class="card" id="cardmedia" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Média</h3>
+                        <p class="card-text" id="mediaResultado"></p>
+                        </div>
+                    </div>
+                    <div class="card" id="carddp" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Desvio Padrão</h3>
+                        <p class="card-text" id="desvioPadraoResultado"></p>
+                        </div>
+                    </div>
+                    <div class="card" id="cardtamamostra" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Tamanho da Amostra</h3>
+                        <p class="card-text" id="tamamostraResultado"></p>
+                        </div>
+                    </div>
+                    <div class="card" id="cardmediana" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Mediana</h3>
+                        <p class="card-text" id="medianaResultado"></p>
+                        <button type="submit" class="botoesCalculo btn btn-primary" onclick="usarMedianaComoB()">Escolher</button>
+                        </div>
+                    </div>
+                    <div class="card" id="cardmoda" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Moda</h3>
+                        <p class="card-text" id="modaResultado"></p>
+                        <button type="submit" class="botoesCalculo btn btn-primary" onclick=" usarModaComoB()">Escolher</button>
+                        </div>
+                    </div>
+                    <div class="card" id="cardmodabruta" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Moda Bruta</h3>
+                        <p class="card-text" id="modabrutaResultado"></p>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+                            onclick="usarModaBrutaComoB()">Escolher</button>
+                        </div>
+                    </div>
+                    <div class="card" id="cardmodaczuber" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Moda Czuber</h3>
+                        <p class="card-text" id="modaczuberResultado"></p>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+                            onclick="usarModaCzuberComoB()">Escolher</button>
+                        </div>
+                    </div>
+                    <div class="card" id="cardProbNormal" style="display:none;">
+                        <div class="card-body">
+                        <h3 class="calculos">Probabilidade Normal</h3>
+                        <button type="submit" class="botoesCalculo btn btn-primary"
+            onclick="const tipo = document.getElementById('inputTypeDistribNormal').value;
+const resultado = document.getElementById('probNormalResultado');
+if (tipo === 'paramEstatisticos') {
+  calcularDistribNormalParametros();
+} else if (tipo === 'dadosListados' || tipo === 'tabelaAgrupDiscreto' || tipo === 'tabelaAgrupClasses') {
+  calcularDistribNormal();
+} else {
+  resultado.textContent = 'Selecione o tipo de entrada primeiro.';
+}">
+            Calcular
+            </button>
+
+
+                        <p class="card-text" id="probNormalResultado"></p>
+                        </div>
+                    </div>
+                    </div>
+            
+        </div>
+
+
+        <div class="col-9">
+      <!--Distribuição normal - Parâmetros estatísticos -->
+      <div id="paramEstatisticos" style="display: none;">
+        <form action="">
+          <label class="label-paramEstatisticos">Digite tamanho da amostra:</label>
+          <input type="text" id="tamanhoAmostra" class="input-paramEstatisticos">
+          <br><br>
+          <label class="label-paramEstatisticos">Digite o valor da média:</label>
+          <input type="text" id="valorMedia" class="input-paramEstatisticos">
+          <br><br>
+          <label class="label-paramEstatisticos">Digite o valor do desvio padrão:</label>
+          <input type="text" id="valorDesvioPadrao" class="input-paramEstatisticos">
+          <br><br>
+
+          <div class="limites">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="aDistrNormal" placeholder="a">
+            </div>
+            <select id="sinalDistrNormal" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">¨
+              <option value="">sinal</option>
+              <option value="menorDistrNormal"> &lt; </option>
+              <option value="menorIgualDistrNormal"> &le; </option>
+            </select>
+
+            <p id="x">X</p>
+
+            <select id="sinal2DistrNormal" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+              <option value="">sinal</option>
+              <option value="maiorDistrNormal"> &gt; </option>
+              <option value="maiorIgualDistrNormal"> &ge; </option>
+              <option value="menor2DistrNormal"> &lt; </option>
+              <option value="menorIgual2DistrNormal"> &le; </option>
+              <option value="igualDistrNormal"> = </option>
+            </select>
+
+            <div class="mb-3">
+              <input type="text" class="form-control" id="bDistrNormal" aria-describedby="emailHelp" placeholder="b">
+            </div>
+            <button onclick="limparCampoTexto(event)" class="Botoes-dados btn btn-danger" style="display:none;"
+              id="btnlimparNormal">Limpar dados</button>
+          </div>
+
+          <br><br>
+  
+        </form>
+        <p id="resultadoDistrNormal"></p>
+      </div>
+
+
+      <!--Distribuição normal - Dados listados -->
+      <div id="dadosListados" style="display:none;">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Digite os dados da amostra:</label>
+            <input type="text" class="form-control" id="valores" aria-describedby="emailHelp"
+              placeholder="Ex: 7, 2, 10, 5">
+            <br>
+          </div>
+          <div class="escolha">
+            <p id="xn">X</p>
+
+            <select id="sinalNormal" class="form-select form-select-lg mb-3 inputType" aria-label="Large select example">
+              <option value="">sinal</option>
+              <option value="maiorNormal"> &gt; </option>
+              <option value="maiorIgualNormal"> &ge; </option>
+              <option value="menorNormal"> &lt; </option>
+              <option value="menorIgualNormal"> &le; </option>
+              <option value="igualNormal"> = </option>
+            </select>
+
+            <p id="M">Mediana/Moda</p>
+          </div>
+          <div class="botoes">
+            <button onclick="limparCampoTexto(event)" class="Botoes-dados btn btn-danger" style="display:none;"
+              id="btnlimparCampoTexto">Limpar dados</button>
+          </div>
+
+          <br><br>
+        </form>
+        <p id="resultadoDistrNormal"></p>
+      </div>
+      <h3 id="resultado"></h3>
+      </form>
+   
+
+    
+    <table id="tabelaAgrupDiscreto" class="table table-striped tabela" style="display:none;">
+      <thead>
+        <tr>
+          <th>Xi</th>
+          <th>Fi</th>
+          <th>Fac</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="number" step="any" class="xi" oninput="atualizarLinha(this)"></td>
+          <td><input type="number" step="any" class="fi" oninput="atualizarLinha(this)"></td>
+          <td><input type="number" step="any" class="fac" oninput="atualizarLinha(this)"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="botoes" id="botoesTabela1" style="display:none;">
+      <button onclick="adicionarLinha()" class="Botoes-dados btn btn-primary" style="display:none;"
+        id="btnAdicionarDisc">Adicionar Linha</button>
+      <button onclick="limparTabela(event)" class="Botoes-dados btn btn-danger" style="display:none;"
+        id="btnlimparTabelaDisc">Limpar tabela</button>
+    </div>
+    <div class="escolha2" id="escolha2" style="display:none;">
+  <p id="x2">X</p>
+  <select id="sinaltab" class="form-select form-select-lg mb-3 inputType" aria-label="Selecionar sinal">
+    <option value="">sinal</option>
+    <option value="maiorNormal"> &gt; </option>
+    <option value="maiorIgualNormal"> &ge; </option>
+    <option value="menorNormal"> &lt; </option>
+    <option value="menorIgualNormal"> &le; </option>
+    <option value="igualNormal"> = </option>
+  </select>
+  <p id="M2">Mediana/Moda</p>
+</div>
+
+
+    <!--Distribuição normal -  Tabela -  Agrupamento em classes -->
+    <table id="tabelaAgrupClasses" class="table table-striped tabela" style="display:none;">
+      <thead>
+        <tr>
+          <th>Li</th>
+          <th>Ls</th>
+          <th>Fi</th>
+          <th>Fac</th>
+          <th>Pmi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="number" step="any" class="li" oninput="atualizarLinha(this)"></td>
+          <td><input type="number" step="any" class="ls" oninput="atualizarLinha(this)"></td>
+          <td><input type="number" step="any" class="fi" oninput="atualizarLinha(this)"></td>
+          <td><input type="number" step="any" class="fac" oninput="atualizarLinha(this)"></td>
+          <td><input type="number" step="any" class="pmi" oninput="atualizarLinha(this)"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="botoes" id="botoesTabela2" style="display:none;">
+      <button onclick="adicionarLinha()" class="Botoes-dados btn btn-primary" id="btnAdicionarClass">Adicionar
+        Linha</button>
+      <button onclick="limparTabela(event)" class="Botoes-dados btn btn-danger" id="btnlimparTabelaClass">Limpar
+        tabela</button>
+    </div>
+    <div class="escolha3" id="escolha3" style="display:none;">
+  <p id="x3">X</p>
+  <select id="sinalclass" class="form-select form-select-lg mb-3 inputType" aria-label="Selecionar sinal">
+    <option value="">sinal</option>
+    <option value="maiorNormal"> &gt; </option>
+    <option value="maiorIgualNormal"> &ge; </option>
+    <option value="menorNormal"> &lt; </option>
+    <option value="menorIgualNormal"> &le; </option>
+    <option value="igualNormal"> = </option>
+  </select>
+  <p id="M3">Mediana/Moda</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+  </main>
+
+  <footer class="text-white text-center py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <p class="mb-1">&copy; 2025 Estatik. Todos os direitos reservados.</p>
+          <img class="Fatec-Logo" src="../../img/fatecLogo.jpg" alt="">
+        </div>
+
+        <div class="col-6">
+          <h3>Feito por:</h3>
+          <ul>
+
+            <li>Arthur Gimenez Oliveira</li>
+            <li>Marcela Aringoli</li>
+            <li>Natália Araújo da Silveira</li>
+            <li>Thamires Marques Alves</li>
+          </ul>
+          <h3>Turma: ADS T - 2025</h3>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/Vac.js"></script>
+  <script src="../../bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
