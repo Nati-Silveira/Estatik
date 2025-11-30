@@ -63,10 +63,10 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 3. Abra o arquivo `home.html` (localizado na pasta `html`) com o Live Server (ou diretamente no navegador).  
 
 
-## Páginas e cálculos
+## Páginas
 
 <h3>Home</h3>
-<p>A Home da plataforma Estatik funciona como um painel de navegação, oferecendo acesso direto a todas os calculos disponibilizados pelo sistema. </p>
+<p>A Home da plataforma Estatik funciona como um painel de navegação, oferecendo acesso direto a todas os cálculos disponibilizados pelo sistema. </p>
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="home" title="Site" src="projeto estatik prints/PRINT-HOME.png">
