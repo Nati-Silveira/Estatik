@@ -60,7 +60,7 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwen
 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Agrupamento Discreto" title="Site" src="..." width="400px">
+  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/agr-disc.png" width="400px">
 </p>
 
 
