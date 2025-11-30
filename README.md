@@ -63,7 +63,20 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 3. Abra o arquivo `home.html` (localizado na pasta `html`) com o Live Server (ou diretamente no navegador).  
 
 
-## Descrição das páginas
+## Páginas e cálculos
+
+<h3>Home</h3>
+<p>A Home da plataforma Estatik funciona como um painel de navegação, oferecendo acesso direto a todas os calculos disponibilizados pelo sistema. </p>
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="home" title="Site" src="projeto estatik prints/PRINT-HOME.png">
+</p>
+
+
+
+
+
+
 <h3>Parâmetros Estatísticos</h3>
 <h4>Agrupamento Discreto</h4>
 <p>O agrupamento discreto é utilizado quando os valores de uma variável já são números isolados (discretos) e não precisam ser organizados em classes ou intervalos.</p>
