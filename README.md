@@ -49,9 +49,18 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 <h4>Com o Orientador: João Carlos dos Santos</h4>
 
 
+## Tecnologias utilizadas
+- HTML5  
+- CSS3  
+- JavaScript  
+- Bootstrap 5  
 
-## Como executar o projeto
-Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dentro de uma outra pasta. O projeto pode ser aberto pelo live server, ou qualquer outro servidor desejado.
+
+
+## Como executar
+1. Baixe ou clone este repositório.  
+2. Certifique-se de manter as pastas: `css`, `fonts`, `html`, `img` e `js`.  
+3. Abra o arquivo `home.html` (localizado na pasta `html`) com o Live Server (ou diretamente no navegador).  
 
 
 ## Descrição das páginas
@@ -215,6 +224,13 @@ Cada valor possui uma probabilidade específica associada.</p>
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="Equação do 1º Grau" title="Site" src="projeto estatik prints/eq1g.png">
 </p>
+
+
+
+
+![Status](https://img.shields.io/badge/status-completo-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 
 
 
