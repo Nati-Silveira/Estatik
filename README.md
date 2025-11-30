@@ -125,7 +125,7 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dent
 <li>Distribuição Exponencial</li>
 </ul>
 
-<h6>distribuição normal</h6>
+<h6>Distribuição Normal</h6>
 <p>A distribução normal calcula:</p>
 <ul>
   <li>Média (automaticamente)</li>
