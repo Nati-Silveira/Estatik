@@ -65,6 +65,65 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwen
 
 
 
+<h4>Agrupamento em Classes </h4>
+<p>O agrupamento em classes é utilizado quando se trabalha com muitos valores numéricos ou quando os dados são contínuos. Em vez de analisar cada número isoladamente, organizamos os dados em intervalos (classes), o que facilita a visualização e interpretação das informações.</p>
+
+<p>Com o estatik, você pode calcular: </p>
+
+<ul>
+  <li>Média</li>
+  <li>Mediana</li>
+  <li>Moda Bruta</li>
+  <li>Moda Czuber</li>
+  <li>Variância</li>
+  <li>Desvio Padrão</li>
+  <li>Coeficiente de variação</li>
+</ul>
+
+
+<p>Print da tela do agrupamento em Classes:</p>
+
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/agr-class.png">
+</p>
+
+
+
+
+
+
+<h4>VAC - Variáveis Aleatórias Contínuas </h4>
+
+
+<p>As Variáveis Aleatórias Contínuas (VAC) representam fenômenos cujos valores podem assumir qualquer número dentro de um intervalo real.</p>
+
+<p>Com o estatik, pode-se calcular a VAC pelas distribuições:</p>
+
+<ul>
+<li>Distribuição Normal
+<ul>
+  <li>oxi funciona subitem?</li>
+</ul>
+</li>
+  
+<li>Distribuição Uniforme</li>
+<li>Distribuição Exponencial</li>
+</ul>
+
+<p>Print da tela VAC:</p>
+
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/vac-ex.png">
+</p>
+
+
+
+
+
+
+
 
 
 
