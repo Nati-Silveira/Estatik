@@ -5,7 +5,7 @@
 </p>
 
 
-## 💻 Sobre o projeto
+## Sobre o projeto
 
 <h3>Descrição</h3>
 
@@ -30,7 +30,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 
 
 
-## 🛠️ Como executar o projeto
+## Como executar o projeto
 Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwentro de uma outra pasta. O projeto pode ser aberto pelo live server, ou qualquer outro servidor
 
 
@@ -91,8 +91,7 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwen
 
 
 
-
-
+<h3>Probabilidade</h3>
 <h4>VAC - Variáveis Aleatórias Contínuas </h4>
 
 
@@ -101,17 +100,46 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwen
 <p>Com o estatik, pode-se calcular a VAC pelas distribuições:</p>
 
 <ul>
-<li>Distribuição Normal
-<ul>
-  <li>oxi funciona subitem?</li>
-</ul>
-</li>
-  
+<li>Distribuição Normal</li>
 <li>Distribuição Uniforme</li>
 <li>Distribuição Exponencial</li>
 </ul>
 
-<p>Print da tela VAC:</p>
+<h6>distribuição normal</h6>
+<p>A distribução normal calcula:</p>
+<ul>
+  <li>Média (automaticamente)</li>
+  <li>Desvio Padrão (automaticamente)</li>
+  <li>Tamanho da Amostra (automaticamente)</li>
+  <li>Probabilidade Normal</li>
+</ul>
+
+<p>As entradas de dados na distribuição Normal podem ser: </p>
+<ul>
+  <li>Listagem de dados</li>
+  <li>Tabela de Frequência individual - Agrupamento discreto </li>
+  <li>Tabela de Frequência individual - Agrupamento em Classes</li>
+</ul>
+
+
+<h6>Distribuição Uniforme</h6>
+<p>A distribuição Uniforme calcula: </p>
+<ul>
+  <li>Média</li>
+  <li>Variância</li>
+  <li>Desvio Padrão</li>
+  <li>Coeficiente de variação</li>
+  <li>Probabilidade</li>
+</ul>
+
+
+<h6>Distribuição Exponencial</h6>
+<p>A distribuição exponencial calcula:</p>
+<ul>
+  <li>Probabilidade Exponencial</li>
+</ul>
+
+<p>Print de exemplo da tela VAC (distribuição exponencial):</p>
 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -120,7 +148,53 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwen
 
 
 
+<h4>Variáveis Aleatórias Discretas </h4>
+<p>As Variáveis Aleatórias Discretas (VAD) representam fenômenos cujos valores possíveis são isolados, (geralmente números inteiros).
+Cada valor possui uma probabilidade específica associada.</p>
 
+<p>Com o estatik, pode-se calcular a VAD pelas distribuições:</p>
+<ul>
+  <li>Distribuição Binomial</li>
+  <li>Distribuição de Poisson</li>
+</ul>
+
+<h6>Distribuição Binomial</h6>
+<p>A distribuição Binomial calcula:</p>
+<ul>
+  <li>Média</li>
+  <li>Variância</li>
+  <li>Desvio Padrão</li>
+  <li>Coeficiente de variação</li>
+  <li>Probabilidade</li>
+</ul>
+
+
+<h6>Distribuição de Poisson</h6>
+<p>A Distribuição de Possion calcula: </p>
+<ul>
+  <li>Desvio Padrão</li>
+  <li>Coeficiente de variação</li>
+  <li>Probabilidade</li>
+</ul>
+
+
+<p>Print de exemplo da tela VAD (distribuição Binomial):</p>
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/vad-ex.png">
+</p>
+
+
+<h3>Regressão Linear</h3>
+<h4>Equação de 1º grau</h4>
+<p>Na regressão linear simples, busca-se ajustar uma equação de 1º grau que represente a relação entre duas variáveis, sendo uma independente (x) e uma dependente (y).</p>
+
+
+<p>Print da tela de Equação de 1º Grau:</p>
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/eq1g.png">
+</p>
 
 
 
