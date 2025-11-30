@@ -12,9 +12,26 @@
 <p>O Estatik é uma plataforma desenvolvida como parte da disciplina de Estatística Aplicada, no curso de Análise e Desenvolvimento de Sistemas. Ela permite realizar diversos cálculos estatísticos de forma simples e intuitiva, incluindo:</p> 
 
 <ul>
-  <li><b>Parâmetros Estatísticos</b>(Agrupamento Discreto e Agrupamento em Classes)</li>
-  <li><b>Probabilidade </b>(VAD – Variáveis Aleatórias Discretas e VAC – Variáveis Aleatórias Contínuas)</li>
-  <li><b>Regressão Linear </b>(Equação de 1º grau)</li>
+  
+  <li><b>Parâmetros Estatísticos</b>
+    <ul>
+      <li>Agrupamento Discreto</li>
+      <li>Agrupamento em Classes</li>
+    </ul>
+  </li>
+  
+  <li><b>Probabilidade </b>
+    <ul>
+      <li>Variáveis Aleatórias Contínuas - VAC </li>
+      <li>Variáveis Aleatórias Discretas - VAD</li>
+    </ul>
+  </li>
+  
+  <li><b>Regressão Linear </b>
+    <ul>
+    <li>Equação de 1º grau</li>
+    </ul>
+  </li>
 
 A plataforma foi pensada para estudantes e profissionais que desejam acessar cálculos estatísticos rapidamente por meio de uma interface minimalista e amigável.</li>
 </ul>
