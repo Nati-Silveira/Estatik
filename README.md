@@ -37,10 +37,14 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 </ul>
 
 <h4>Este trabalho foi feito por:</h4>
-<p>Arthur Gimenez Oliveira</p>
-<p>Marcela Aringoli</p>
-<p>Natália Araújo da Silveira</p>
-<p>Thamires Marques Alves</p>
+<ul>
+  <li>Arthur Gimenez Oliveira</li>
+  <li>Marcela Aringoli</li>
+  <li>Natália Araújo da Silveira</li>
+  <li>Thamires Marques Alves</li>
+</ul>
+
+
 
 <h4>Com o Orientador: </h4>
 <p>João Carlos dos Santos</p>
