@@ -105,7 +105,7 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dent
 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/agr-class.png">
+  <img alt="Agrupamento em Classes" title="Site" src="projeto estatik prints/agr-class.png">
 </p>
 
 
@@ -163,7 +163,7 @@ Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dent
 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/vac-ex.png">
+  <img alt="VAC - Exponencial" title="Site" src="projeto estatik prints/vac-ex.png">
 </p>
 
 
@@ -201,7 +201,7 @@ Cada valor possui uma probabilidade específica associada.</p>
 <p>Print de exemplo da tela VAD (distribuição Binomial):</p>
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/vad-ex.png">
+  <img alt="VAD - Binomial " title="Site" src="projeto estatik prints/vad-ex.png">
 </p>
 
 
@@ -213,7 +213,7 @@ Cada valor possui uma probabilidade específica associada.</p>
 <p>Print da tela de Equação de 1º Grau:</p>
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Agrupamento Discreto" title="Site" src="projeto estatik prints/eq1g.png">
+  <img alt="Equação do 1º Grau" title="Site" src="projeto estatik prints/eq1g.png">
 </p>
 
 
