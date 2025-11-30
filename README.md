@@ -228,12 +228,6 @@ Cada valor possui uma probabilidade específica associada.</p>
 
 
 
-![Status](https://img.shields.io/badge/status-completo-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
-
-
-
 
 
 
