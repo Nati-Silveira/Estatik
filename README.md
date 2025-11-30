@@ -13,7 +13,7 @@
 
 <ul>
   
-  <li><b>Parâmetros Estatísticos</b>
+  <li><b>Parâmetros Estáticos</b>
     <ul>
       <li>Agrupamento Discreto</li>
       <li>Agrupamento em Classes</li>
@@ -78,7 +78,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 
 
 
-<h3>Parâmetros Estatísticos</h3>
+<h3>Parâmetros Estáticos</h3>
 <h4>Agrupamento Discreto</h4>
 <p>O agrupamento discreto é utilizado quando os valores de uma variável já são números isolados (discretos) e não precisam ser organizados em classes ou intervalos.</p>
 
@@ -99,7 +99,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
   <li>Tabela (que calcula automaticamente a Frequência Acumulada)</li>
 </ul>
 
-<p>Print da tela do agrupamento discreto:</p>
+<p>Print da tela do Agrupamento Discreto:</p>
 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -124,7 +124,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 </ul>
 
 
-<p>Print da tela do agrupamento em Classes:</p>
+<p>Print da tela do Agrupamento em Classes:</p>
 
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
@@ -149,7 +149,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 </ul>
 
 <h6>Distribuição Normal</h6>
-<p>A distribução normal calcula:</p>
+<p>A Distribução Normal calcula:</p>
 <ul>
   <li>Média (automaticamente)</li>
   <li>Desvio Padrão (automaticamente)</li>
@@ -160,8 +160,8 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 <p>As entradas de dados na distribuição Normal podem ser: </p>
 <ul>
   <li>Listagem de dados</li>
-  <li>Tabela de Frequência individual - Agrupamento discreto </li>
-  <li>Tabela de Frequência individual - Agrupamento em Classes</li>
+  <li>Tabela de Frequência Individual - Agrupamento discreto </li>
+  <li>Tabela de Frequência Individual  - Agrupamento em Classes</li>
 </ul>
 
 
