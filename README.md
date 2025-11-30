@@ -33,6 +33,7 @@
     </ul>
   </li>
 
+<br>
 A plataforma foi pensada para estudantes e profissionais que desejam acessar cálculos estatísticos rapidamente por meio de uma interface minimalista e amigável.</li>
 </ul>
 
