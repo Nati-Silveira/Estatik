@@ -46,8 +46,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 
 
 
-<h4>Com o Orientador: </h4>
-<p>João Carlos dos Santos</p>
+<h4>Com o Orientador: João Carlos dos Santos</h4>
 
 
 
