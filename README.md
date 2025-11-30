@@ -48,7 +48,7 @@ A plataforma foi pensada para estudantes e profissionais que desejam acessar cá
 
 
 ## Como executar o projeto
-Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dwentro de uma outra pasta. O projeto pode ser aberto pelo live server, ou qualquer outro servidor
+Baixe as pastas disponibilizadas nesse repositório (css, fonts, html e js) dentro de uma outra pasta. O projeto pode ser aberto pelo live server, ou qualquer outro servidor desejado.
 
 
 ## Descrição das páginas
